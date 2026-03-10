@@ -1,0 +1,29 @@
+:root {
+    --cor-botao: #282B3E;
+    --cor-fundo: #202231;
+    --cor-botao-hover: #494D6F;
+    --cor-x: #0D9DFD;
+    --cor-o: #FF66D8;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: var(--cor-fundo);
+}
+
+button {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 1.8rem;
+    border: 0;
+    background-color: var(--cor-botao);
+    
+}
+
+button:hover {
+    background-color: var(--cor-botao-hover);
+    transition: 0.4s;
+}
