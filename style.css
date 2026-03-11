@@ -27,14 +27,32 @@ button {
     height: 7rem;
     width: 7rem;
     border-radius: 1.8rem;
-    border: 0;
+    border: none;
     background-color: var(--cor-botao);
+    cursor: pointer;
     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+    font-weight: bold;
+
+    appearance: none;
 }
 
 button:hover {
     background-color: var(--cor-botao-hover);
     transition: 0.5s;
+}
+
+button:active {
+    transform: none;
+    box-shadow: none;
+}
+
+button:focus {
+    outline: none;
 }
 
 #restart {
@@ -45,4 +63,16 @@ button:hover {
     font-size: 1.2rem;
     font-weight: 550;
     align-items: center;
+}
+
+.x {
+    color: #FF66D8;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.o {
+    color: #0D9DFD;
+    font-size: 3rem;
+    font-weight: bold;
 }

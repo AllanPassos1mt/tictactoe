@@ -1,10 +1,31 @@
-const btn1 = document.getElementById('1');
-const btn2 = document.getElementById('1');
-const btn3 = document.getElementById('1');
-const btn4 = document.getElementById('1');
-const btn5 = document.getElementById('1');
-const btn6 = document.getElementById('1');
-const btn7 = document.getElementById('1');
-const btn8 = document.getElementById('1');
-const btn9 = document.getElementById('1');
+let jogador = "X";
 
+function marcar(botao){
+
+    if(botao.innerHTML !== ""){
+        return;
+    }
+
+    botao.innerHTML = jogador;
+
+    if(jogador === "X"){
+        botao.classList.add("x");
+        jogador = "O";
+    }else{
+        botao.classList.add("o");
+        jogador = "X";
+    }
+}
+
+function limpar(){
+
+    let botoes = document.querySelectorAll(".btn");
+
+    botoes.forEach(function(botao){
+        botao.innerHTML = "";
+        botao.classList.remove("x");
+        botao.classList.remove("o");
+    });
+
+    jogador = "X";
+}
